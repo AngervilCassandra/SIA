@@ -1,0 +1,74 @@
+
+/**
+ * Write a description of class Village here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Village
+{
+    // instance variables - replace the example below with your own
+    private int nombreVillageois;
+    private String nomVillage;
+    private boolean chefVillage;
+    private boolean estAmoureux;
+
+    /**
+     * Constructor for objects of class Village
+     */
+    public Village()
+    {
+    }
+    
+    public Village(int nb, String nom, boolean chef,boolean a)
+    {
+        this.nombreVillageois = nb;
+        this.nomVillage = nom;
+        this.chefVillage = chef;
+        this.estAmoureux = a;
+        
+        
+      
+    }
+   
+    public boolean elu(){
+        if((chefVillage == true)&& (estAmoureux == true)){
+            return true;
+        }
+            else{
+            return false;
+            }
+    }
+    
+    public int getnombreVillageois(){
+        return nombreVillageois;
+    }
+    
+     public String getnomVillage(){
+        return nomVillage;
+    }
+    
+    public boolean getchefVillage(){
+        return chefVillage;
+    }
+    
+    public void setnombreVillageois(int nombreVillageois){
+        this.nombreVillageois=nombreVillageois;
+    }
+    
+     public void setnomVillage(String nomVillage){
+         this.nomVillage=nomVillage;
+    }
+    
+     public void setchefVillage(boolean chefVillage){
+         this.chefVillage=chefVillage;
+    }
+
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+   
+}
