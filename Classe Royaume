@@ -1,0 +1,107 @@
+
+/**
+ * Write a description of class Royaume here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+import java.util.ArrayList;
+public class Royaume
+{
+    // instance variables - replace the example below with your own
+    
+     private String princesse;
+     private boolean bonneAMarier;
+     private int agePrincesse;
+     
+     private ArrayList <Village> myListeVillages; 
+     private String village = "";
+     
+    /**
+     * Constructor for objects of class Royaume
+     */
+    
+    
+    public Royaume(){}
+    
+    public Royaume(String princesse,boolean bonneAMarier,int age,String village)
+    {
+        // initialise instance variables
+   
+        this.princesse = princesse;
+        this.bonneAMarier = bonneAMarier;
+        this.agePrincesse = age;
+        myListeVillages = new ArrayList<Village>();
+        this.village=village;
+    }
+
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+   
+    
+    public void marierLaPrincesse(){
+        if(this.agePrincesse >=18){
+            this.bonneAMarier = true;
+        }
+        else
+            {
+                this.bonneAMarier = false ; 
+                
+            }
+            System.out.println("l'âge est de " + this.bonneAMarier);
+    
+    }
+    
+    public boolean addVillage(Village v){
+        this.village=v.getnomVillage();
+        myListeVillages.add(v);
+        return true;
+    }
+    
+    public boolean pretendant(Village v){
+        
+        boolean myPretendant = false;
+        for(int i=0;i<myListeVillages.size();i++){
+        
+            if((this.bonneAMarier == true) &&(v.elu() == true)) {
+            
+                myPretendant=true;
+            } else {
+                
+                myPretendant=false;
+            }
+        }
+        return myPretendant;
+    }
+    
+    
+   public String getVillage()
+    {
+        return this.village;
+    }
+    
+   
+       public int getAgePrincesse()
+    {
+        return this.agePrincesse;
+    }
+    public String getPrincesse()
+    {
+        return this.princesse;
+    }
+
+     public void setPrincesse(String princesse)
+    {
+        this.princesse = princesse ;
+    }
+       public void setAgePrincesse(int age)
+    {
+         this.agePrincesse = age;
+    }
+    
+   
+}
